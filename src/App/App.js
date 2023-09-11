@@ -5,12 +5,15 @@ import { getReservations } from '../APICalls';
 
 function App() {
 
-useEffect(() => {
-  getReservations()
-  .then((data) => {
-    console.log(data)
-  })
-},[])
+  useEffect(() => {
+    getReservations()
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((error) => {
+      console.log("There was a problem.", error.message);
+    });
+  }, []);
 
   return (
     <div className="App">
