@@ -1,17 +1,18 @@
 import './reservations.css';
-import Card from "./Card"
+import Card from '../Card/card';
 function Reservations({ reservations }){
 
-  const reservationCards = reservations.map(reservation => {
-    return (
-      <Card
-        title={reservation.name}
-        description={reservation.date}
-        id={reservation.time}
-        key={reservation.id}
-      />
-    )
-  })
+    const reservationCards = reservations.map(reservation => {
+        return (
+          <Card
+            name={reservation.name}
+            date={reservation.date}
+            time={reservation.time}
+            number={reservation.number}
+            key={reservation.id}
+          />
+        );
+      });
 
   return (
     <div className='reservation-container'>

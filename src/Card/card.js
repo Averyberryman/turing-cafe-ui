@@ -1,4 +1,4 @@
-import './Card.css';
+import './card.css';
 
 const Card = ({ name, date, time, number }) => {
     return (
